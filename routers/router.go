@@ -11,6 +11,7 @@ func Init(r *gin.Engine) {
 			"message": "pong",
 		})
 	})
+	r.Static("static", "./static")
 	//r.LoadHTMLGlob("views/*")
 	r.LoadHTMLFiles("views/login.html")
 	r.GET("/login", func(ctx *gin.Context) {

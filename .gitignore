@@ -1,0 +1,5 @@
+.idea
+go.sum
+./client
+logs
+logs/*
