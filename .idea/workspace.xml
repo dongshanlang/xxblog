@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ccc37a-3aba-43b3-af8c-613c309bf92c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/repositories/resource.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositories/userRepository.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/userService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/article/artical.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/conf.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/zanbuchuli/index.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zanbuchuli/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +22,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -37,22 +32,27 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/教程/qianduan/beeego资料/class" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/repositories" />
-      <recent name="$PROJECT_DIR$/dao/db" />
-      <recent name="$PROJECT_DIR$/zanbuchuli" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/conf" />
       <recent name="D:\code\xxblog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\xxblog\views" />
+      <recent name="D:\code\xxblog\zanbuchuli" />
+      <recent name="$PROJECT_DIR$/repositories" />
+      <recent name="$PROJECT_DIR$/dao/db" />
+      <recent name="$PROJECT_DIR$/zanbuchuli" />
     </key>
   </component>
   <component name="RunDashboard">

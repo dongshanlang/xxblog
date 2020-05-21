@@ -5,15 +5,13 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"xxblog/conf"
 	log "xxblog/logger"
-	"xxblog/model"
-	"xxblog/repositories"
 	"xxblog/routers"
 )
 
 func main() {
 	r := gin.Default()
 	initLog()
-	repositories.InitDBConnection(model.Models...)
+	//repositories.InitDBConnection(model.Models...)
 	routers.Init(r)
 	log.Info("server start")
 	err := r.Run(":8089") // 监听并在 0.0.0.0:8080 上启动服务
