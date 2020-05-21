@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ccc37a-3aba-43b3-af8c-613c309bf92c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/article/artical.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/zanbuchuli/index.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zanbuchuli/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth/auth.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

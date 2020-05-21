@@ -42,7 +42,7 @@ func SignIn(ctx *gin.Context) {
 		ctx.HTML(http.StatusOK, "login.html", struct{}{})
 		return
 	}
-	ctx.JSON(http.StatusOK, "ok")
+	ctx.Redirect(http.StatusFound, "/article/articles")
 }
 
 func GetSignUp(ctx *gin.Context) {
