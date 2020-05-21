@@ -1,0 +1,30 @@
+debug: true
+log:
+  dir: ./logs
+  stdOut: true
+  Error: ./logs/error
+  Info: ./logs/info
+
+httpServer:
+  dialTimeout: "30s"
+  dialKeepalive: "30s"
+  maxIdleConn: 100
+  maxIdle_conns_per_host: 100
+  max_conns_per_host: 200
+  idle_conn_timeout: "90s"
+  tls_handshake_timeout: "10s"
+  expect_continue_timeout: "1s"
+mysql:
+    dsn: "web_user:6e84a08131d88d397a667692168e8a6b@tcp(3340-master.default.mysql.dev.data.qi-e.tv:3340)/stt_config?charset=utf8&parseTime=True&loc=Local"
+    maxIdleConnection: 10
+    maxConnection: 500
+
+redis:
+  network: "tcp"
+  addr: "master.redis_ad.redis.dev.data.qi-e.tv:6379"
+  auth: ""
+  db: 0
+  maxIdleConnection: 10
+  maxConnection: 100
+  pubSubChan: "linkPK:chan:local"
+

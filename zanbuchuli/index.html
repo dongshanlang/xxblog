@@ -55,12 +55,12 @@
             <form id="form" method="get" action="/index">
             <select name="select" id="select" class="sel_opt">
                 {{range .articleType}}
-                    {{if compare $.typeid .Id}}
-                <option selected="selected"  value="{{.Id}}" >{{.Tname}}</option>
-                            {{else}}
+                    {{if eq $.typeid .Id}}
+                        <option selected="selected"  value="{{.Id}}" > {{.Tname}} </option>
+                    {{else}}
                         <option   value="{{.Id}}" >{{.Tname}}</option>
-                            {{end}}
-                        {{end}}
+                    {{end}}
+                {{end}}
             </select>
                 <input type="submit" hidden="hidden">
             </form>
