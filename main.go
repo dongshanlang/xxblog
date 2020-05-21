@@ -2,14 +2,18 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"xxblog/conf"
 	log "xxblog/logger"
+	"xxblog/model"
+	"xxblog/repositories"
 	"xxblog/routers"
 )
 
 func main() {
 	r := gin.Default()
 	initLog()
+	repositories.InitDBConnection(model.Models...)
 	routers.Init(r)
 	log.Info("server start")
 	err := r.Run(":8089") // 监听并在 0.0.0.0:8080 上启动服务
@@ -17,6 +21,7 @@ func main() {
 		panic(err)
 	}
 }
+
 func initLog() {
 	c := log.New()
 	c.SetDivision("time")    // 设置归档方式，"time"时间归档 "size" 文件大小归档，文件大小等可以在配置文件配置

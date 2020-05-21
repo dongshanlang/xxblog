@@ -44,10 +44,14 @@ func init() {
 
 // Config config
 type Config struct {
-	Debug bool              `yaml:"debug"`
-	Log   *Log              `yaml:"log"`
-	Mysql map[string]*Mysql `yaml:"mysql" mapstructure:"mysql"`
-	Redis *Redis            `yaml:"redis" mapstructure:"redis"`
+	Debug bool   `yaml:"debug"`
+	Log   *Log   `yaml:"log"`
+	Mysql *Mysql `yaml:"mysql" mapstructure:"mysql"`
+	Redis *Redis `yaml:"redis" mapstructure:"redis"`
+	Init  *InitInfo
+}
+type InitInfo struct {
+	DB bool
 }
 
 type Log struct {

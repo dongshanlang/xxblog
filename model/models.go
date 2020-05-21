@@ -1,6 +1,9 @@
 package model
 
 import "database/sql"
+
+var Models = []interface{}{&User{}}
+
 type Model struct {
 	Id int64 `gorm:"PRIMARY_KEY;AUTO_INCREMENT" json:"id" form:"id"`
 }
@@ -22,3 +25,7 @@ type User struct {
 	CreateTime   int64          `json:"createTime" form:"createTime"`                               // 创建时间
 	UpdateTime   int64          `json:"updateTime" form:"updateTime"`                               // 更新时间
 }
+
+//func (User) TableName() string {
+//	return "user"
+//}

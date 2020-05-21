@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ccc37a-3aba-43b3-af8c-613c309bf92c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/conf/conf.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/auth/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/logger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/logger_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/unit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/models.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/resource.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/userRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/userService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/zanbuchuli/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/models.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +45,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/repositories" />
+      <recent name="$PROJECT_DIR$/dao/db" />
       <recent name="$PROJECT_DIR$/zanbuchuli" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -84,6 +81,16 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -103,21 +110,5 @@
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.cn</proxy>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/controller/auth/auth.go</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/controller/auth/auth.go</url>
-          <line>42</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
