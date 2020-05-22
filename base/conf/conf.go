@@ -6,6 +6,7 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/spf13/viper"
 	"time"
+	log "xxblog/base/logger"
 )
 
 var (
@@ -13,15 +14,15 @@ var (
 	Conf     *Config
 )
 
-func init() {
+func Init() {
 	flag.StringVar(&confPath, "c", "", "config file path")
 	flag.Parse()
 	if confPath == "" {
 		viper.SetConfigName("config")       // name of config file (without extension)
 		viper.SetConfigType("yml")          // REQUIRED if the config file does not have the extension in the name
 		viper.AddConfigPath("/etc/xxblog/") // path to look for the config file in
-		viper.AddConfigPath("./conf/")      // call multiple times to add many search paths
-		viper.AddConfigPath(".")            // optionally look for config in the working directory
+		viper.AddConfigPath("./base/conf/") // call multiple times to add many search paths
+		viper.AddConfigPath("../base/conf") // optionally look for config in the working directory
 	} else {
 		viper.SetConfigFile(confPath)
 	}
@@ -40,6 +41,9 @@ func init() {
 		fmt.Println(err)
 	}
 	Conf = c
+
+	//初始化日志
+	initLog()
 }
 
 // Config config
@@ -80,4 +84,20 @@ type Redis struct {
 	MinIdleConn  int
 	IdleTimeout  time.Duration
 	PubSubChan   string
+}
+
+func initLog() {
+	c := log.New()
+	c.SetDivision("time")    // 设置归档方式，"time"时间归档 "size" 文件大小归档，文件大小等可以在配置文件配置
+	c.SetTimeUnit(log.Day)   // 时间归档 可以设置切割单位
+	c.SetEncoding("console") // 输出格式 "json" 或者 "console"
+	if Conf.Debug {
+		c.Debug()
+	}
+	if !Conf.Log.Stdout {
+		c.CloseConsoleDisplay()
+	}
+	c.SetInfoFile(Conf.Log.Info)
+	c.SetErrorFile(Conf.Log.Error)
+	c.InitLogger()
 }

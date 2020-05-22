@@ -3,8 +3,8 @@ package repositories
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"xxblog/conf"
-	log "xxblog/logger"
+	"xxblog/base/conf"
+	log "xxblog/base/logger"
 )
 
 var DB *gorm.DB

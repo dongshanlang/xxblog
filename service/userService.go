@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/jinzhu/gorm"
-	"xxblog/logger"
+	"xxblog/base/logger"
 	"xxblog/model"
 	"xxblog/repositories"
 )

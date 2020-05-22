@@ -21,6 +21,8 @@ func Init(r *gin.Engine) {
 	articleRoute := r.Group("article")
 	{
 		articleRoute.GET("articles", article.ShowArticles)
+		articleRoute.GET("add", article.ShowAddArticle)
+		articleRoute.POST("add", article.AddArticle)
 	}
 
 	test := r.Group("/test")
@@ -32,10 +34,10 @@ func Init(r *gin.Engine) {
 	r.SetFuncMap(template.FuncMap{
 		"showprepage":  prepage,
 		"shownextpage": shownextpage,
+		"compare":      compare,
 	})
 	r.Static("static", "./static")
 	r.LoadHTMLGlob("./views/*")
-	//r.LoadHTMLFiles("views/login.html")
 }
 
 //试图函数，获取上一页页码
@@ -55,4 +57,10 @@ func prepage(pageindex int) (preIndex int) {
 func shownextpage(pageindex int) (nextIndex int) {
 	nextIndex = pageindex + 1
 	return
+}
+func compare(a, b interface{}) bool {
+	if a == nil || b == nil {
+		return false
+	}
+	return a == b
 }
