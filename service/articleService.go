@@ -2,6 +2,8 @@ package service
 
 import (
 	"time"
+	"xxblog/base/logger"
+	"xxblog/model"
 	"xxblog/repositories"
 )
 
@@ -75,4 +77,46 @@ func (s *articleService) GetPagination() (pagination Pagination) {
 		PageCount: 10,
 		Count:     100,
 	}
+}
+func (s *articleService) AddArticle(title, content, imgUrl string, userId, articleType int64) bool {
+	tx := repositories.DB.Begin()
+	article := model.Article{
+		UserId:      userId,
+		Title:       title,
+		Summary:     "",
+		Content:     content,
+		ContentType: "text",
+		Status:      0,
+		Share:       false,
+		SourceUrl:   imgUrl,
+		ViewCount:   0,
+		CreateTime:  time.Now().Unix(),
+		UpdateTime:  0,
+	}
+	err := repositories.ArticleRepository.Create(
+		tx, &article)
+	if err != nil {
+		tx.Rollback()
+		logger.Errorf("create article failed: %+v", err)
+		return false
+	}
+	at := model.ArticleTag{
+		ArticleId:  article.Id,
+		TagId:      articleType,
+		Status:     0,
+		CreateTime: time.Now().Unix(),
+	}
+	err = repositories.ArticleTagRepository.Create(tx, &at)
+	if err != nil {
+		tx.Rollback()
+		logger.Errorf("create article_tag failed: %+v", err)
+		return false
+	}
+	err = tx.Commit().Error
+	if err != nil {
+		tx.Rollback()
+		logger.Errorf("create article commit failed: %+v", err)
+		return false
+	}
+	return true
 }

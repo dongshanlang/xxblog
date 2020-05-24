@@ -18,6 +18,10 @@ func ShowArticles(ctx *gin.Context) {
 	var err error
 	err = ctx.ShouldBind(&req)
 	if err != nil || req.Select == 0 {
+		if err != nil {
+			ctx.JSON(http.StatusOK, err)
+			return
+		}
 		selectNum = 4
 	} else {
 		selectNum = req.Select
@@ -36,7 +40,4 @@ func ShowAddArticle(ctx *gin.Context) {
 	ctx.HTML(http.StatusOK, "add.html", gin.H{
 		"articleType": service.ArticleService.GetArticleTypes(),
 	})
-}
-func AddArticle(ctx *gin.Context) {
-
 }

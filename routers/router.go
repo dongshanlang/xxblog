@@ -23,6 +23,7 @@ func Init(r *gin.Engine) {
 		articleRoute.GET("articles", article.ShowArticles)
 		articleRoute.GET("add", article.ShowAddArticle)
 		articleRoute.POST("add", article.AddArticle)
+		articleRoute.GET("article", article.ShowSpecificArticle)
 	}
 
 	test := r.Group("/test")

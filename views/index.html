@@ -78,7 +78,7 @@
             {{range .articles}}
                 <tr>
                     <td>{{.ArtiName}}</td>
-                    <td><a href="/content?id={{.Id}}">查看详情</a></td>
+                    <td><a href="/article/article?id={{.Id}}">查看详情</a></td>
                     <td> {{.Atime.Format "2006-01-02"}}</td>
                     <td>{{.Acount}}</td>
                     <td><a href="/delete?id={{.Id}}" class="dels">删除</a></td>

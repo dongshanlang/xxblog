@@ -30,7 +30,7 @@ func TestCreateArticle(t *testing.T) {
 	}
 	at := model.ArticleTag{
 		ArticleId:  article.Id,
-		TagId:      4,
+		TagId:      1,
 		Status:     0,
 		CreateTime: time.Now().Unix(),
 	}
