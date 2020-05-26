@@ -120,3 +120,28 @@ func (s *articleService) AddArticle(title, content, imgUrl string, userId, artic
 	}
 	return true
 }
+
+type ArticleShowInfo struct {
+	ArtiName string
+	TypeName string
+	Acontent string
+	Aimg     string
+	Acount   int64
+	Atime    time.Time
+}
+
+func (s *articleService) GetArticle(Id int64) *ArticleShowInfo {
+	article, err := repositories.ArticleRepository.Get(repositories.DB, Id)
+	if err != nil {
+		logger.Errorf("get article error: %+v", err)
+		return nil
+	}
+	return &ArticleShowInfo{
+		ArtiName: article.Title,
+		TypeName: "123",
+		Acontent: article.Content,
+		Aimg:     article.SourceUrl,
+		Acount:   article.ViewCount,
+		Atime:    time.Unix(article.CreateTime, 0),
+	}
+}

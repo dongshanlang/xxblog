@@ -38,7 +38,7 @@ func AddArticle(ctx *gin.Context) {
 		err = nil
 	}
 
-	bCreateRet := service.ArticleService.AddArticle(req.ArticleName, req.Content, dst, 1, req.Select)
+	bCreateRet := service.ArticleService.AddArticle(req.ArticleName, req.Content, dst[1:], 1, req.Select)
 	if !bCreateRet {
 		ctx.HTML(http.StatusOK, "add.html", gin.H{
 			"articleType": service.ArticleService.GetArticleTypes(),

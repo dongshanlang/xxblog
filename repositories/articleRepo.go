@@ -27,3 +27,7 @@ func (r *articleRepository) GetTitleAll(db *gorm.DB, title string) (list []model
 	err = db.Where("title = ?", title).Find(&articles).Error
 	return articles, err
 }
+func (r *articleRepository) Get(db *gorm.DB, Id int64) (article model.Article, err error) {
+	err = db.Where("id = ?", Id).Find(&article).Error
+	return article, err
+}

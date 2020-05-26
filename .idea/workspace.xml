@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ccc37a-3aba-43b3-af8c-613c309bf92c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/article/add.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/article/specific.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/upload/1.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/conf/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/base/conf/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/article/artical.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/article/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/article_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/article_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/article/add.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/article/add.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/article/specific.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/article/specific.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/articleRepo.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/articleRepo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/articleService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/articleService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addType.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/addType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/content.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +25,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:\Go" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -43,7 +41,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="D:/教程/qianduan/beeego资料/class" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -163,26 +161,5 @@
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.cn</proxy>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/controller/article/add.go</url>
-          <line>26</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/controller/article/add.go</url>
-          <line>22</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/controller/article/specific.go</url>
-          <line>15</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
