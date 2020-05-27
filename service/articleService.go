@@ -56,14 +56,20 @@ func (s *articleService) GetArticles() (articles []Article) {
 		return nil
 	}
 	for _, a := range list {
+		artiTag, err := repositories.ArticleTagRepository.FindByArticleID(repositories.DB, a.Id)
+		if err != nil {
+			logger.Errorf("get article type by article id failed: %+v", err)
+			continue
+		}
+		repositories.ArticleRepository
 		articles = append(articles, Article{
 			Id:       a.Id,
 			ArtiName: a.Title,
 			Atime:    time.Unix(a.CreateTime, 0),
 			Acount:   a.ViewCount,
-			ArticleType: ArtiType{
-				Id:    4,
-				Tname: "体育新闻",
+			ArticleType: {
+				Id:    0,
+				Tname: "",
 			},
 		})
 	}
@@ -144,4 +150,16 @@ func (s *articleService) GetArticle(Id int64) *ArticleShowInfo {
 		Acount:   article.ViewCount,
 		Atime:    time.Unix(article.CreateTime, 0),
 	}
+}
+func (s *articleService) DelArticle(Id int64) {
+	err := repositories.ArticleRepository.Del(repositories.DB, &model.Article{
+		Model: model.Model{
+			Id: Id,
+		},
+	})
+	if err != nil {
+		logger.Errorf("get article error: %+v", err)
+		return
+	}
+	return
 }

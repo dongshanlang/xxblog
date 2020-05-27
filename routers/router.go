@@ -24,6 +24,7 @@ func Init(r *gin.Engine) {
 		articleRoute.GET("add", article.ShowAddArticle)
 		articleRoute.POST("add", article.AddArticle)
 		articleRoute.GET("article", article.ShowSpecificArticle)
+		articleRoute.GET("del", article.DelArticle)
 	}
 
 	test := r.Group("/test")

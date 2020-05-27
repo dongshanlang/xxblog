@@ -81,8 +81,8 @@
                     <td><a href="/article/article?id={{.Id}}">查看详情</a></td>
                     <td> {{.Atime.Format "2006-01-02"}}</td>
                     <td>{{.Acount}}</td>
-                    <td><a href="/delete?id={{.Id}}" class="dels">删除</a></td>
-                    <td><a href="/update?id={{.Id}}">编辑</a></td>
+                    <td><a href="/article/del?id={{.Id}}" class="dels">删除</a></td>
+                    <td><a href="/article/update?id={{.Id}}"> 编辑</a></td>
                     <td>{{.ArticleType.Tname}}</td>
                 </tr>
                     {{end}}

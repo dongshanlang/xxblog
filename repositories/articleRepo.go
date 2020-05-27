@@ -17,6 +17,10 @@ func (r *articleRepository) Create(db *gorm.DB, t *model.Article) (err error) {
 	err = db.Create(t).Error
 	return
 }
+func (r *articleRepository) Del(db *gorm.DB, t *model.Article) (err error) {
+	err = db.Delete(t).Error
+	return
+}
 func (r *articleRepository) GetUserAll(db *gorm.DB, userId int64) (list []model.Article, err error) {
 	var articles []model.Article
 	err = db.Where("user_id = ?", userId).Find(&articles).Error
