@@ -21,3 +21,7 @@ func (r *tagRepository) GetAll(db *gorm.DB) (tags []model.Tag, err error) {
 	err = db.Where("status = ?", 0).Find(&tags).Error
 	return
 }
+func (r *tagRepository) GetById(db *gorm.DB, Id int64) (tag model.Tag, err error) {
+	err = db.Where("id = ?", Id).First(&tag).Error
+	return
+}

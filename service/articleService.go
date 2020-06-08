@@ -61,19 +61,22 @@ func (s *articleService) GetArticles() (articles []Article) {
 			logger.Errorf("get article type by article id failed: %+v", err)
 			continue
 		}
-		repositories.ArticleRepository
+		tagInfo, err := repositories.TagRepository.GetById(repositories.DB, artiTag.Id)
+		if err != nil {
+			logger.Errorf("get article type by article id failed: %+v", err)
+			continue
+		}
 		articles = append(articles, Article{
 			Id:       a.Id,
 			ArtiName: a.Title,
 			Atime:    time.Unix(a.CreateTime, 0),
 			Acount:   a.ViewCount,
-			ArticleType: {
-				Id:    0,
-				Tname: "",
+			ArticleType: ArtiType{
+				Id:    tagInfo.Id,
+				Tname: tagInfo.Name,
 			},
 		})
 	}
-
 	return
 }
 func (s *articleService) GetPagination() (pagination Pagination) {

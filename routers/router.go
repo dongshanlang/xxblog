@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"xxblog/controller/article"
 	"xxblog/controller/auth"
+	"xxblog/controller/tag"
 )
 
 func Init(r *gin.Engine) {
@@ -25,6 +26,11 @@ func Init(r *gin.Engine) {
 		articleRoute.POST("add", article.AddArticle)
 		articleRoute.GET("article", article.ShowSpecificArticle)
 		articleRoute.GET("del", article.DelArticle)
+	}
+	tagRoute := r.Group("tag")
+	{
+		tagRoute.GET("add", tag.AddTag)
+		tagRoute.POST("add", tag.AddTag)
 	}
 
 	test := r.Group("/test")
